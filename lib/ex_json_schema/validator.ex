@@ -180,7 +180,7 @@ defmodule ExJsonSchema.Validator do
   defp validate_aspect(_, _, {"enum", enum}, data) do
     case Enum.any?(enum, &(&1 === data)) do
       true -> []
-      false -> [%Error{error: %Error.Enum{}, path: ""}]
+      false -> [%Error{error: %Error.Enum{expected: enum, actual: data}, path: ""}]
     end
   end
 

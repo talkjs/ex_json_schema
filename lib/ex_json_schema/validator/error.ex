@@ -16,7 +16,7 @@ defmodule ExJsonSchema.Validator.Error do
   defmodule MinItems, do: defstruct [:expected, :actual]
   defmodule MaxItems, do: defstruct [:expected, :actual]
   defmodule UniqueItems, do: defstruct []
-  defmodule Enum, do: defstruct []
+  defmodule Enum, do: defstruct [:expected, :actual]
   defmodule Minimum, do: defstruct [:expected, :exclusive?]
   defmodule Maximum, do: defstruct [:expected, :exclusive?]
   defmodule MultipleOf, do: defstruct [:expected]
